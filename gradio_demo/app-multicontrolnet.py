@@ -47,8 +47,8 @@ app = FaceAnalysis(
 app.prepare(ctx_id=0, det_size=(640, 640))
 
 # Path to InstantID models
-face_adapter = f"./checkpoints/ip-adapter.bin"
-controlnet_path = f"./checkpoints/ControlNetModel"
+face_adapter = f"/app/checkpoints/ip-adapter.bin"
+controlnet_path = f"/app/checkpoints/ControlNetModel"
 
 # Load pipeline face ControlNetModel
 controlnet_identitynet = ControlNetModel.from_pretrained(

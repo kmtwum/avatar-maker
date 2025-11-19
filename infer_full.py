@@ -46,8 +46,8 @@ if __name__ == "__main__":
     app.prepare(ctx_id=0, det_size=(640, 640))
 
     # Path to InstantID models
-    face_adapter = f'./checkpoints/ip-adapter.bin'
-    controlnet_path = f'./checkpoints/ControlNetModel'
+    face_adapter = f'/app/checkpoints/ip-adapter.bin'
+    controlnet_path = f'/app/checkpoints/ControlNetModel'
     controlnet_depth_path = f'diffusers/controlnet-depth-sdxl-1.0-small'
     
     # Load depth detector

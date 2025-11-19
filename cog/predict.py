@@ -25,13 +25,13 @@ from pipeline_stable_diffusion_xl_instantid import (
 )
 
 # for `ip-adaper`, `ControlNetModel`, and `stable-diffusion-xl-base-1.0`
-CHECKPOINTS_CACHE = "./checkpoints"
+CHECKPOINTS_CACHE = "/app/checkpoints"
 CHECKPOINTS_URL = (
     "https://weights.replicate.delivery/default/InstantID/checkpoints.tar"
 )
 
 # for `models/antelopev2`
-MODELS_CACHE = "./models"
+MODELS_CACHE = "/app/models"
 MODELS_URL = "https://weights.replicate.delivery/default/InstantID/models.tar"
 
 
@@ -93,8 +93,8 @@ class Predictor(BasePredictor):
         self.app.prepare(ctx_id=0, det_size=(self.width, self.height))
 
         # Path to InstantID models
-        face_adapter = f"./checkpoints/ip-adapter.bin"
-        controlnet_path = f"./checkpoints/ControlNetModel"
+        face_adapter = f"/app/checkpoints/ip-adapter.bin"
+        controlnet_path = f"/app/checkpoints/ControlNetModel"
 
         # Load pipeline
         self.controlnet = ControlNetModel.from_pretrained(
