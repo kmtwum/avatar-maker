@@ -3,6 +3,7 @@ torch~=2.1.2
 numpy~=1.26.3
 pillow~=10.2.0
 diffusers~=0.25.1
+controlnet_aux
 insightface~=0.7.3
 transformers~=4.37.1
 safetensors~=0.4.2
